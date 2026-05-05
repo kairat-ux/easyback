@@ -40,7 +40,7 @@ export default function Contact() {
   }
 
   return (
-    <div className="auth-page" style={{ paddingBottom: '3rem' }}>
+    <div className="auth-page">
       <div className="auth-card" style={{ maxWidth: '520px' }}>
         <h1 style={{ fontSize: '1.8rem' }}>{t('contactTitle')}</h1>
         <p className="auth-sub">{t('contactSub')}</p>
@@ -114,37 +114,43 @@ export default function Contact() {
             </button>
           </form>
         )}
-      </div>
 
-      {/* Contact info */}
-      <div style={{ maxWidth: '520px', width: '100%', marginTop: '1.5rem', display: 'flex', gap: '1rem', flexWrap: 'wrap', justifyContent: 'center' }}>
-        <div style={{
-          flex: 1, minWidth: '220px',
-          background: 'var(--white)',
-          border: '1px solid rgba(44,188,253,.15)',
-          borderRadius: 'var(--radius-md)',
-          padding: '1.25rem 1.5rem',
-        }}>
-          <div style={{ fontWeight: 600, fontSize: '.9rem', marginBottom: '.5rem', color: 'var(--ink)' }}>{t('contactEmail')}</div>
-          <a href="mailto:support@englisheasy.com" style={{ color: 'var(--blue)', fontSize: '.9rem', textDecoration: 'none' }}>
-            support@englisheasy.com
-          </a>
-        </div>
-        <div style={{
-          flex: 1, minWidth: '220px',
-          background: 'var(--white)',
-          border: '1px solid rgba(44,188,253,.15)',
-          borderRadius: 'var(--radius-md)',
-          padding: '1.25rem 1.5rem',
-        }}>
-          <div style={{ fontWeight: 600, fontSize: '.9rem', marginBottom: '.5rem', color: 'var(--ink)' }}>{t('contactFollow')}</div>
-          <div style={{ display: 'flex', gap: '.75rem', flexWrap: 'wrap' }}>
-            <a href="https://github.com" target="_blank" rel="noreferrer"
-              style={{ fontSize: '.9rem', color: 'var(--blue)', textDecoration: 'none' }}>GitHub</a>
-            <a href="https://t.me" target="_blank" rel="noreferrer"
-              style={{ fontSize: '.9rem', color: 'var(--blue)', textDecoration: 'none' }}>Telegram</a>
-            <a href="https://instagram.com" target="_blank" rel="noreferrer"
-              style={{ fontSize: '.9rem', color: 'var(--blue)', textDecoration: 'none' }}>Instagram</a>
+        {/* Divider + contact info */}
+        <div style={{ borderTop: '1px solid rgba(44,188,253,.12)', marginTop: '1.75rem', paddingTop: '1.5rem', display: 'flex', flexDirection: 'column', gap: '.85rem' }}>
+          <div style={{ display: 'flex', alignItems: 'center', gap: '.75rem' }}>
+            <span style={{ fontSize: '1.1rem' }}>📧</span>
+            <div>
+              <div style={{ fontSize: '.78rem', color: 'var(--ink-soft)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.05em', marginBottom: '.1rem' }}>{t('contactEmail')}</div>
+              <a href="mailto:support@englisheasy.com" style={{ color: 'var(--blue)', fontSize: '.9rem' }}>
+                support@englisheasy.com
+              </a>
+            </div>
+          </div>
+
+          <div style={{ display: 'flex', alignItems: 'center', gap: '.75rem' }}>
+            <span style={{ fontSize: '1.1rem' }}>🌐</span>
+            <div>
+              <div style={{ fontSize: '.78rem', color: 'var(--ink-soft)', fontWeight: 600, textTransform: 'uppercase', letterSpacing: '.05em', marginBottom: '.35rem' }}>{t('contactFollow')}</div>
+              <div style={{ display: 'flex', gap: '.6rem', flexWrap: 'wrap' }}>
+                {[
+                  { label: 'GitHub',    href: 'https://github.com' },
+                  { label: 'Telegram',  href: 'https://t.me' },
+                  { label: 'Instagram', href: 'https://instagram.com' },
+                ].map(s => (
+                  <a key={s.label} href={s.href} target="_blank" rel="noreferrer"
+                    style={{
+                      fontSize: '.82rem', fontWeight: 600,
+                      color: 'var(--ink-mid)',
+                      background: 'var(--surface)',
+                      border: '1px solid rgba(44,188,253,.18)',
+                      borderRadius: '999px',
+                      padding: '.25rem .75rem',
+                      transition: 'all .2s',
+                    }}
+                  >{s.label}</a>
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>
