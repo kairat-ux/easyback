@@ -26,7 +26,11 @@ class AuthController extends Controller
             'status'   => $status,
         ]);
 
-        Mail::to($user->email)->send(new WelcomeMail($user));
+        try {
+            Mail::to($user->email)->send(new WelcomeMail($user));
+        } catch (\Throwable) {
+            // mail failure must never block registration
+        }
 
         $token = $user->createToken('auth_token')->plainTextToken;
 

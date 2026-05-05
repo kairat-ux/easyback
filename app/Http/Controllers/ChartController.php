@@ -34,7 +34,7 @@ class ChartController extends Controller
         // POLAR AREA: average score % by exercise type
         $polarData = Attempt::select(
                 'exercises.type',
-                DB::raw('ROUND(AVG(CAST(attempts.score AS FLOAT) / NULLIF(attempts.max_score, 0) * 100), 1) as avg_score')
+                DB::raw('ROUND(CAST(AVG(CAST(attempts.score AS NUMERIC) / NULLIF(attempts.max_score, 0) * 100) AS NUMERIC), 1) as avg_score')
             )
             ->join('exercises', 'attempts.exercise_id', '=', 'exercises.id')
             ->groupBy('exercises.type')
@@ -42,12 +42,12 @@ class ChartController extends Controller
 
         // LINE: registrations last 30 days grouped by date
         $lineData = User::select(
-                DB::raw('DATE(created_at) as date'),
+                DB::raw('CAST(created_at AS DATE) as date'),
                 DB::raw('COUNT(*) as count')
             )
             ->where('created_at', '>=', now()->subDays(30))
-            ->groupBy('date')
-            ->orderBy('date')
+            ->groupBy(DB::raw('CAST(created_at AS DATE)'))
+            ->orderBy(DB::raw('CAST(created_at AS DATE)'))
             ->get();
 
         return response()->json([
@@ -85,7 +85,7 @@ class ChartController extends Controller
         // POLAR AREA: student's avg score by exercise type
         $polarData = Attempt::select(
                 'exercises.type',
-                DB::raw('ROUND(AVG(CAST(attempts.score AS FLOAT) / NULLIF(attempts.max_score, 0) * 100), 1) as avg_score')
+                DB::raw('ROUND(CAST(AVG(CAST(attempts.score AS NUMERIC) / NULLIF(attempts.max_score, 0) * 100) AS NUMERIC), 1) as avg_score')
             )
             ->join('exercises', 'attempts.exercise_id', '=', 'exercises.id')
             ->where('attempts.student_id', $userId)
@@ -94,13 +94,13 @@ class ChartController extends Controller
 
         // LINE: student's avg score by date last 14 days
         $lineData = Attempt::select(
-                DB::raw('DATE(created_at) as date'),
-                DB::raw('ROUND(AVG(CAST(score AS FLOAT) / NULLIF(max_score, 0) * 100), 1) as avg_score')
+                DB::raw('CAST(created_at AS DATE) as date'),
+                DB::raw('ROUND(CAST(AVG(CAST(score AS NUMERIC) / NULLIF(max_score, 0) * 100) AS NUMERIC), 1) as avg_score')
             )
             ->where('student_id', $userId)
             ->where('created_at', '>=', now()->subDays(14))
-            ->groupBy('date')
-            ->orderBy('date')
+            ->groupBy(DB::raw('CAST(created_at AS DATE)'))
+            ->orderBy(DB::raw('CAST(created_at AS DATE)'))
             ->get();
 
         return response()->json([
