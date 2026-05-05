@@ -1,5 +1,6 @@
 FROM php:8.3-apache
 
+# Установка системных зависимостей
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -10,20 +11,39 @@ RUN apt-get update && apt-get install -y \
     && docker-php-ext-install pdo pdo_pgsql pgsql zip \
     && a2enmod rewrite
 
+# Установка Composer
 COPY --from=composer:2 /usr/bin/composer /usr/bin/composer
+
+# Настройка Apache для Laravel
+COPY <<EOF /etc/apache2/sites-available/000-default.conf
+<VirtualHost *:80>
+    DocumentRoot /var/www/html/public
+    <Directory /var/www/html/public>
+        AllowOverride All
+        Order Allow,Deny
+        Allow from all
+    </Directory>
+</VirtualHost>
+EOF
 
 WORKDIR /var/www/html
 
+# Сначала копируем только composer файлы для кэширования
+COPY composer.json composer.lock ./
+RUN composer install --no-dev --no-scripts --no-autoloader
+
+# Копируем остальной проект
 COPY . .
 
-RUN composer install --no-dev --optimize-autoloader --no-interaction
+# Финальная установка
+RUN composer dump-autoload --optimize
 
-RUN chown -R www-data:www-data /var/www/html \
-    && sed -i 's!/var/www/html!/var/www/html/public!g' /etc/apache2/sites-available/000-default.conf
+# Права доступа
+RUN chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 
 EXPOSE 80
 
-CMD php artisan config:clear && \
-    php artisan route:clear && \
-    php artisan view:clear && \
+# Стартовый скрипт
+CMD php artisan config:cache && \
+    php artisan route:cache && \
     apache2-foreground
