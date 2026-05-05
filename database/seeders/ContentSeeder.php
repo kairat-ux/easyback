@@ -191,6 +191,116 @@ class ContentSeeder extends Seeder
                 ],
             ],
 
+            // ── BEGINNER ─────────────────────────────────────────────────
+            [
+                'title' => 'Numbers, Money & Measurements',
+                'description' => 'Count, calculate, and talk about prices and sizes in English.',
+                'content' => "## Cardinal Numbers\n1–10: one, two, three, four, five, six, seven, eight, nine, ten\n11–20: eleven, twelve, thirteen, fourteen, fifteen, sixteen, seventeen, eighteen, nineteen, twenty\nLarge: hundred, thousand, million, billion\n\n## Ordinal Numbers\nfirst, second, third, fourth, fifth, sixth, tenth, twentieth, hundredth\n\n## Money Phrases\n- How much does it cost? — It costs £12.50\n- That's too expensive. / That's a bargain!\n- Can I pay by card? / Do you accept cash?\n- Could I have a receipt, please?\n- I'd like to exchange some money.\n\n## Measurements\nLength: millimetre, centimetre, metre, kilometre / inch, foot, mile\nWeight: gram, kilogram, pound, ounce\nVolume: millilitre, litre, pint, gallon\nTemperature: degrees Celsius / Fahrenheit\n\n## Useful Expressions\n- It's about 2 metres tall.\n- She weighs roughly 60 kilograms.\n- The temperature is around minus 5.\n- I need half a kilo of flour.",
+                'vocabulary' => [
+                    ['word' => 'cardinal', 'translation' => 'количественный (о числительном)'],
+                    ['word' => 'ordinal', 'translation' => 'порядковый (о числительном)'],
+                    ['word' => 'bargain', 'translation' => 'выгодная сделка / дёшево'],
+                    ['word' => 'receipt', 'translation' => 'чек'],
+                    ['word' => 'exchange', 'translation' => 'обменивать'],
+                    ['word' => 'roughly', 'translation' => 'приблизительно'],
+                ],
+            ],
+            [
+                'title' => 'Family & Relationships',
+                'description' => 'Vocabulary for describing family members, relationships, and life events.',
+                'content' => "## Immediate Family\nmother/mum, father/dad, brother, sister, son, daughter, husband, wife, partner\n\n## Extended Family\ngrandmother/grandma, grandfather/grandpa, aunt, uncle, cousin, nephew, niece, in-laws (mother-in-law, father-in-law)\n\n## Relationship Status\nsingle, in a relationship, engaged, married, divorced, widowed, separated\n\n## Life Events\nbe born, grow up, go to school, graduate, get a job, fall in love, get married, have children, retire, pass away\n\n## Describing Relationships\n- They get on really well.\n- We have a lot in common.\n- They've been together for 10 years.\n- She takes after her mother. (resembles)\n- He's the spitting image of his father.\n\n## Family Adjectives\nclose-knit, supportive, dysfunctional, extended, nuclear, blended (step-family)",
+                'vocabulary' => [
+                    ['word' => 'nephew', 'translation' => 'племянник'],
+                    ['word' => 'niece', 'translation' => 'племянница'],
+                    ['word' => 'engaged', 'translation' => 'помолвленный'],
+                    ['word' => 'widowed', 'translation' => 'вдовый/вдовая'],
+                    ['word' => 'close-knit', 'translation' => 'дружная (о семье)'],
+                    ['word' => 'take after', 'translation' => 'быть похожим на (родителя)'],
+                    ['word' => 'blended family', 'translation' => 'смешанная семья'],
+                ],
+            ],
+
+            // ── INTERMEDIATE ──────────────────────────────────────────────
+            [
+                'title' => 'Passive Voice: All Tenses',
+                'description' => 'Learn how to form and use the passive voice across different tenses.',
+                'content' => "## What is the Passive?\nWe use the passive when the action is more important than who does it.\nActive: Someone built this bridge in 1901.\nPassive: This bridge **was built** in 1901.\n\n## Formation: be + past participle\n| Tense | Active | Passive |\n|---|---|---|\n| Present Simple | they make | it **is made** |\n| Present Continuous | they are making | it **is being made** |\n| Past Simple | they made | it **was made** |\n| Past Continuous | they were making | it **was being made** |\n| Present Perfect | they have made | it **has been made** |\n| Future (will) | they will make | it **will be made** |\n\n## When to Use Passive\n- When the agent is unknown: *My car was stolen.*\n- When the agent is obvious: *The suspect was arrested.*\n- In formal/scientific writing: *The experiment was conducted...*\n- To avoid blame: *Mistakes were made.*\n\n## By + Agent\n- The novel **was written** by Tolstoy.\n- The window **was broken** by the children.",
+                'vocabulary' => [
+                    ['word' => 'passive voice', 'translation' => 'страдательный залог'],
+                    ['word' => 'active voice', 'translation' => 'действительный залог'],
+                    ['word' => 'past participle', 'translation' => 'причастие прошедшего времени'],
+                    ['word' => 'agent', 'translation' => 'исполнитель действия'],
+                    ['word' => 'conduct', 'translation' => 'проводить (эксперимент)'],
+                    ['word' => 'suspect', 'translation' => 'подозреваемый'],
+                ],
+            ],
+            [
+                'title' => 'Reported Speech',
+                'description' => 'How to report what someone said — statements, questions, and commands.',
+                'content' => "## Direct vs Reported Speech\nDirect: She said, \"I **am** tired.\"\nReported: She said (that) she **was** tired.\n\n## Tense Backshift\n| Direct | Reported |\n|---|---|\n| am/is/are | was/were |\n| was/were | had been |\n| will | would |\n| can | could |\n| have/has | had |\n| do/does | did |\n\n## Reporting Verbs\nsaid, told, asked, explained, admitted, denied, promised, warned, suggested, claimed\n\n## Reporting Questions\nYes/No questions → if/whether:\n- \"Are you coming?\" → He asked **if** I was coming.\n\nWh-questions → same question word:\n- \"Where do you live?\" → She asked **where** I lived.\n\n## Reporting Commands\nTell/ask + object + to-infinitive:\n- \"Close the door!\" → He told me **to close** the door.\n- \"Please don't shout.\" → She asked me **not to shout**.\n\n## Time/Place Changes\nnow→then, today→that day, here→there, yesterday→the day before, tomorrow→the next day",
+                'vocabulary' => [
+                    ['word' => 'reported speech', 'translation' => 'косвенная речь'],
+                    ['word' => 'backshift', 'translation' => 'сдвиг времён назад'],
+                    ['word' => 'admit', 'translation' => 'признавать'],
+                    ['word' => 'deny', 'translation' => 'отрицать'],
+                    ['word' => 'claim', 'translation' => 'утверждать'],
+                    ['word' => 'warn', 'translation' => 'предупреждать'],
+                ],
+            ],
+            [
+                'title' => 'Comparatives & Superlatives',
+                'description' => 'Compare people, places, and things using the right grammatical forms.',
+                'content' => "## Comparative (comparing 2 things)\nShort adj + **-er** + than: tall → **taller than**, fast → **faster than**\n**More** + long adj + than: beautiful → **more beautiful than**\nIrregular: good → **better**, bad → **worse**, far → **further/farther**\n\n## Superlative (comparing 3+ things)\nThe + short adj + **-est**: tall → **the tallest**, fast → **the fastest**\nThe + **most** + long adj: beautiful → **the most beautiful**\nIrregular: good → **the best**, bad → **the worst**, far → **the furthest**\n\n## Spelling Rules\n- One vowel + consonant: big → bigg**er**, bigg**est**\n- Ending in -y: happy → happ**ier**, happ**iest**\n- Ending in -e: nice → nic**er**, nic**est**\n\n## Modifiers\n- **Much/far** bigger (big difference)\n- **A bit/slightly** taller (small difference)\n- **Just as** tall as (equal)\n- **Not as** tall as (less)\n\n## Examples\n- London is **much bigger than** my hometown.\n- This is **the most interesting** book I've ever read.\n- She's **not as experienced as** her colleague.",
+                'vocabulary' => [
+                    ['word' => 'comparative', 'translation' => 'сравнительная степень'],
+                    ['word' => 'superlative', 'translation' => 'превосходная степень'],
+                    ['word' => 'irregular', 'translation' => 'неправильный'],
+                    ['word' => 'modifier', 'translation' => 'усилитель/смягчитель'],
+                    ['word' => 'slightly', 'translation' => 'слегка / немного'],
+                ],
+            ],
+            [
+                'title' => 'Collocations: Make vs Do',
+                'description' => 'One of the most common mistakes — learn which verbs go with which nouns.',
+                'content' => "## MAKE — creating, producing, preparing\n**Make** + : a mistake, a decision, a suggestion, a complaint, a promise, a noise, an effort, progress, a phone call, a difference, friends, money, a speech, plans, an excuse, breakfast/lunch/dinner\n\n## DO — activities, work, tasks\n**Do** + : homework, the washing up, the dishes, exercise, research, business, someone a favour, your best, harm, good, a course, chores, the shopping\n\n## Tricky Ones\n- Make an appointment ✓ (not do)\n- Do an exam ✓ (not make) — *BUT* make a test (create one)\n- Make a mess ✓ (not do)\n- Do the housework ✓ (not make)\n- Make a bed ✓ (not do)\n\n## Example Sentences\n- Could you **do me a favour**?\n- She **made a complaint** to the manager.\n- I need to **do some research** for my essay.\n- He **made an excuse** for being late.\n- Don't forget to **do the washing up**!\n- We **made a decision** to move abroad.",
+                'vocabulary' => [
+                    ['word' => 'collocation', 'translation' => 'устойчивое словосочетание'],
+                    ['word' => 'chores', 'translation' => 'домашние обязанности'],
+                    ['word' => 'complaint', 'translation' => 'жалоба'],
+                    ['word' => 'favour', 'translation' => 'одолжение'],
+                    ['word' => 'appointment', 'translation' => 'встреча / запись (к врачу)'],
+                ],
+            ],
+            [
+                'title' => 'Environment & Climate Change',
+                'description' => 'Vocabulary and phrases for one of the most important topics of our time.',
+                'content' => "## Key Terms\nglobal warming, greenhouse effect, carbon footprint, renewable energy, fossil fuels, deforestation, biodiversity, ecosystem, sustainability, climate change\n\n## Environmental Problems\n- air/water/soil pollution\n- melting ice caps / rising sea levels\n- ozone layer depletion\n- habitat destruction\n- endangered species\n- plastic waste / landfill\n- acid rain\n\n## Solutions\n- solar/wind/hydro power\n- recycling and composting\n- electric vehicles\n- reducing single-use plastics\n- reforestation / tree planting\n- carbon offsetting\n- energy efficiency\n\n## Useful Phrases\n- We need to reduce our carbon footprint.\n- Governments must invest in renewable energy.\n- Climate change is an existential threat.\n- We should switch to sustainable alternatives.\n- Every individual can make a difference.\n\n## Verbs\nto pollute, to recycle, to conserve, to emit, to deplete, to sustain, to threaten, to devastate",
+                'vocabulary' => [
+                    ['word' => 'greenhouse effect', 'translation' => 'парниковый эффект'],
+                    ['word' => 'carbon footprint', 'translation' => 'углеродный след'],
+                    ['word' => 'deforestation', 'translation' => 'вырубка лесов'],
+                    ['word' => 'biodiversity', 'translation' => 'биоразнообразие'],
+                    ['word' => 'renewable energy', 'translation' => 'возобновляемая энергия'],
+                    ['word' => 'fossil fuels', 'translation' => 'ископаемое топливо'],
+                    ['word' => 'sustainability', 'translation' => 'устойчивость / экологичность'],
+                    ['word' => 'carbon offsetting', 'translation' => 'компенсация выбросов углерода'],
+                ],
+            ],
+            [
+                'title' => 'Emotions & Feelings Vocabulary',
+                'description' => 'Express yourself accurately with a rich vocabulary of emotions.',
+                'content' => "## Basic Emotions\nhappy, sad, angry, scared/afraid, surprised, disgusted, confused\n\n## More Precise Words\n| Basic | More precise |\n|---|---|\n| happy | delighted, ecstatic, content, cheerful, elated |\n| sad | miserable, heartbroken, devastated, gloomy, melancholy |\n| angry | furious, irritated, frustrated, annoyed, outraged |\n| scared | terrified, anxious, nervous, apprehensive, uneasy |\n| surprised | astonished, amazed, stunned, shocked, bewildered |\n\n## Emotional Phrases\n- I'm feeling under the weather. (not well)\n- She's on cloud nine. (very happy)\n- He's feeling blue. (sad)\n- I'm at my wit's end. (frustrated, don't know what to do)\n- She's a bundle of nerves. (very anxious)\n\n## Expressing Emotions\n- I was over the moon when I heard the news!\n- It broke my heart to see her cry.\n- I can't help feeling anxious about the exam.\n- He was absolutely livid.\n- I'm a bit down today — not sure why.",
+                'vocabulary' => [
+                    ['word' => 'ecstatic', 'translation' => 'в восторге / на седьмом небе'],
+                    ['word' => 'melancholy', 'translation' => 'меланхолия / грусть'],
+                    ['word' => 'furious', 'translation' => 'в ярости'],
+                    ['word' => 'apprehensive', 'translation' => 'встревоженный / опасающийся'],
+                    ['word' => 'bewildered', 'translation' => 'растерянный / озадаченный'],
+                    ['word' => 'livid', 'translation' => 'в бешенстве'],
+                    ['word' => 'on cloud nine', 'translation' => 'на седьмом небе от счастья'],
+                ],
+            ],
+
             // ── IELTS / ADVANCED ─────────────────────────────────────────
             [
                 'title' => 'IELTS Writing: Task 2 Essay Structure',
@@ -415,9 +525,226 @@ class ContentSeeder extends Seeder
                 ],
             ],
 
-            // Phrasal Verbs ───────────────────────────────────────────
+            // Numbers & Money ─────────────────────────────────────────
+            [
+                'lesson_index' => 13,
+                'title' => 'Numbers & Money Quiz',
+                'type' => 'multiple_choice',
+                'difficulty' => 'easy',
+                'description' => 'Test your knowledge of numbers, prices, and measurements.',
+                'questions' => [
+                    ['question' => 'How do you say 1,500 in English?', 'options' => ['one thousand and five', 'fifteen hundred', 'one five zero zero', 'one thousand five'], 'correct_answer' => 'fifteen hundred'],
+                    ['question' => '"That\'s a bargain!" means:', 'options' => ['it\'s very expensive', 'it\'s a great price', 'it\'s broken', 'it\'s ugly'], 'correct_answer' => 'it\'s a great price'],
+                    ['question' => 'Which is correct? "The bag weighs ___."', 'options' => ['2 kilometre', '2 kilograms', '2 kilogramme', '2 kilo'], 'correct_answer' => '2 kilograms'],
+                    ['question' => 'What does "roughly" mean in "It costs roughly £50"?', 'options' => ['exactly', 'approximately', 'at least', 'less than'], 'correct_answer' => 'approximately'],
+                    ['question' => 'The ordinal form of 3 is:', 'options' => ['three', 'threeth', 'third', 'thrice'], 'correct_answer' => 'third'],
+                ],
+            ],
+            [
+                'lesson_index' => 13,
+                'title' => 'Money & Shopping Phrases',
+                'type' => 'matching',
+                'difficulty' => 'easy',
+                'description' => 'Match each phrase to the correct situation.',
+                'questions' => [
+                    ['left' => 'Can I pay by card?', 'right' => 'asking about payment method'],
+                    ['left' => 'Could I have a receipt?', 'right' => 'asking for proof of purchase'],
+                    ['left' => 'How much does it cost?', 'right' => 'asking for the price'],
+                    ['left' => 'That\'s too expensive.', 'right' => 'saying the price is too high'],
+                    ['left' => 'I\'d like to exchange money.', 'right' => 'converting currency'],
+                ],
+            ],
+
+            // Family ──────────────────────────────────────────────────
             [
                 'lesson_index' => 14,
+                'title' => 'Family Vocabulary Quiz',
+                'type' => 'multiple_choice',
+                'difficulty' => 'easy',
+                'description' => 'Choose the correct family term.',
+                'questions' => [
+                    ['question' => 'Your mother\'s sister is your:', 'options' => ['niece', 'cousin', 'aunt', 'sister-in-law'], 'correct_answer' => 'aunt'],
+                    ['question' => 'Your brother\'s son is your:', 'options' => ['cousin', 'nephew', 'uncle', 'grandson'], 'correct_answer' => 'nephew'],
+                    ['question' => '"She takes after her mother" means:', 'options' => ['she follows her mother', 'she looks/acts like her mother', 'she takes care of her', 'she argues with her'], 'correct_answer' => 'she looks/acts like her mother'],
+                    ['question' => 'A "close-knit family" is:', 'options' => ['a very small family', 'a family that knits together', 'a family with strong bonds', 'a formal family'], 'correct_answer' => 'a family with strong bonds'],
+                    ['question' => 'A "blended family" includes:', 'options' => ['only biological children', 'step-parents and step-children', 'grandparents living together', 'single parent families'], 'correct_answer' => 'step-parents and step-children'],
+                ],
+            ],
+
+            // Passive Voice ───────────────────────────────────────────
+            [
+                'lesson_index' => 15,
+                'title' => 'Passive Voice: Choose the Correct Form',
+                'type' => 'multiple_choice',
+                'difficulty' => 'medium',
+                'description' => 'Select the correct passive construction.',
+                'questions' => [
+                    ['question' => 'The Eiffel Tower ___ in 1889.', 'options' => ['built', 'was built', 'is built', 'has built'], 'correct_answer' => 'was built'],
+                    ['question' => 'English ___ all over the world.', 'options' => ['speaks', 'is speaking', 'is spoken', 'spoken'], 'correct_answer' => 'is spoken'],
+                    ['question' => 'The report ___ by the manager right now.', 'options' => ['is written', 'is being written', 'was written', 'has written'], 'correct_answer' => 'is being written'],
+                    ['question' => 'My wallet ___! I can\'t find it anywhere.', 'options' => ['stole', 'has been stolen', 'was stealing', 'is stealing'], 'correct_answer' => 'has been stolen'],
+                    ['question' => 'The new bridge ___ next year.', 'options' => ['will build', 'is built', 'will be built', 'was built'], 'correct_answer' => 'will be built'],
+                    ['question' => 'The letter ___ by Shakespeare himself.', 'options' => ['wrote', 'was written', 'is written', 'has wrote'], 'correct_answer' => 'was written'],
+                ],
+            ],
+            [
+                'lesson_index' => 15,
+                'title' => 'Active to Passive: Fill in the Blank',
+                'type' => 'fill_blank',
+                'difficulty' => 'hard',
+                'description' => 'Rewrite using the passive voice.',
+                'questions' => [
+                    ['question' => 'Someone broke the window. → The window ___ (break).', 'correct_answer' => 'was broken'],
+                    ['question' => 'They are building a new road. → A new road ___ (build).', 'correct_answer' => 'is being built'],
+                    ['question' => 'Shakespeare wrote Hamlet. → Hamlet ___ by Shakespeare. (write)', 'correct_answer' => 'was written'],
+                    ['question' => 'They will deliver the package tomorrow. → The package ___ tomorrow. (deliver)', 'correct_answer' => 'will be delivered'],
+                    ['question' => 'People speak French in Canada. → French ___ in Canada. (speak)', 'correct_answer' => 'is spoken'],
+                ],
+            ],
+
+            // Reported Speech ─────────────────────────────────────────
+            [
+                'lesson_index' => 16,
+                'title' => 'Reported Speech: Tense Backshift',
+                'type' => 'multiple_choice',
+                'difficulty' => 'medium',
+                'description' => 'Choose the correct reported speech form.',
+                'questions' => [
+                    ['question' => '"I am hungry." → She said she ___ hungry.', 'options' => ['is', 'was', 'will be', 'has been'], 'correct_answer' => 'was'],
+                    ['question' => '"I will call you." → He promised he ___ me.', 'options' => ['will call', 'would call', 'called', 'has called'], 'correct_answer' => 'would call'],
+                    ['question' => '"Are you coming?" → She asked if I ___ coming.', 'options' => ['am', 'was', 'were', 'would be'], 'correct_answer' => 'was'],
+                    ['question' => '"Don\'t touch that!" → He told me ___ touch it.', 'options' => ['don\'t', 'not to', 'to not', 'didn\'t'], 'correct_answer' => 'not to'],
+                    ['question' => '"I have finished." → She said she ___ finished.', 'options' => ['has', 'had', 'have', 'was'], 'correct_answer' => 'had'],
+                ],
+            ],
+            [
+                'lesson_index' => 16,
+                'title' => 'Reporting Verbs: Match',
+                'type' => 'matching',
+                'difficulty' => 'hard',
+                'description' => 'Match each direct speech to the correct reporting verb.',
+                'questions' => [
+                    ['left' => '"I didn\'t steal it!" said John.', 'right' => 'denied'],
+                    ['left' => '"I\'ll be there at 8." said Maria.', 'right' => 'promised'],
+                    ['left' => '"Watch out for the dog!" he said.', 'right' => 'warned'],
+                    ['left' => '"Why don\'t we go to the cinema?" she said.', 'right' => 'suggested'],
+                    ['left' => '"Yes, I broke the window." he said.', 'right' => 'admitted'],
+                ],
+            ],
+
+            // Comparatives ────────────────────────────────────────────
+            [
+                'lesson_index' => 17,
+                'title' => 'Comparatives & Superlatives Quiz',
+                'type' => 'multiple_choice',
+                'difficulty' => 'easy',
+                'description' => 'Choose the correct comparative or superlative form.',
+                'questions' => [
+                    ['question' => 'Russia is ___ country in the world. (large)', 'options' => ['larger', 'the most large', 'the largest', 'more large'], 'correct_answer' => 'the largest'],
+                    ['question' => 'This test is ___ than the last one. (difficult)', 'options' => ['difficulter', 'more difficult', 'most difficult', 'the most difficult'], 'correct_answer' => 'more difficult'],
+                    ['question' => 'She runs ___ than her brother. (fast)', 'options' => ['more fast', 'fastest', 'faster', 'the fastest'], 'correct_answer' => 'faster'],
+                    ['question' => 'He is ___ student in the class. (good)', 'options' => ['the goodest', 'the most good', 'the best', 'better'], 'correct_answer' => 'the best'],
+                    ['question' => 'Today is ___ than yesterday. (cold)', 'options' => ['more cold', 'coldest', 'the coldest', 'colder'], 'correct_answer' => 'colder'],
+                    ['question' => 'This is ___ film I have ever seen. (bad)', 'options' => ['the most bad', 'the worst', 'the baddest', 'worse'], 'correct_answer' => 'the worst'],
+                ],
+            ],
+            [
+                'lesson_index' => 17,
+                'title' => 'Fill in: Comparative or Superlative',
+                'type' => 'fill_blank',
+                'difficulty' => 'medium',
+                'description' => 'Write the correct form of the adjective.',
+                'questions' => [
+                    ['question' => 'My bag is ___ (heavy) than yours.', 'correct_answer' => 'heavier'],
+                    ['question' => 'This is ___ (interesting) book I\'ve ever read.', 'correct_answer' => 'the most interesting'],
+                    ['question' => 'She\'s ___ (happy) now than she was last year.', 'correct_answer' => 'happier'],
+                    ['question' => 'He drives ___ (carefully) than his wife.', 'correct_answer' => 'more carefully'],
+                    ['question' => 'That\'s ___ (bad) excuse I\'ve ever heard!', 'correct_answer' => 'the worst'],
+                ],
+            ],
+
+            // Make vs Do ──────────────────────────────────────────────
+            [
+                'lesson_index' => 18,
+                'title' => 'Make or Do?',
+                'type' => 'multiple_choice',
+                'difficulty' => 'medium',
+                'description' => 'Choose the correct verb: make or do.',
+                'questions' => [
+                    ['question' => 'I need to ___ my homework before dinner.', 'options' => ['make', 'do', 'have', 'take'], 'correct_answer' => 'do'],
+                    ['question' => 'She ___ a mistake in the calculation.', 'options' => ['did', 'made', 'had', 'took'], 'correct_answer' => 'made'],
+                    ['question' => 'Can you ___ me a favour?', 'options' => ['make', 'do', 'give', 'have'], 'correct_answer' => 'do'],
+                    ['question' => 'He ___ a promise to be on time.', 'options' => ['did', 'made', 'took', 'had'], 'correct_answer' => 'made'],
+                    ['question' => 'I always ___ the dishes after dinner.', 'options' => ['make', 'do', 'wash', 'clean'], 'correct_answer' => 'do'],
+                    ['question' => 'They ___ a decision to move to Canada.', 'options' => ['did', 'made', 'took', 'had'], 'correct_answer' => 'made'],
+                    ['question' => 'She\'s ___ a course in graphic design.', 'options' => ['making', 'doing', 'having', 'taking'], 'correct_answer' => 'doing'],
+                ],
+            ],
+
+            // Environment ─────────────────────────────────────────────
+            [
+                'lesson_index' => 19,
+                'title' => 'Environment Vocabulary Match',
+                'type' => 'matching',
+                'difficulty' => 'medium',
+                'description' => 'Match each environmental term to its definition.',
+                'questions' => [
+                    ['left' => 'carbon footprint', 'right' => 'total CO2 emissions of a person/organisation'],
+                    ['left' => 'deforestation', 'right' => 'large-scale cutting down of forests'],
+                    ['left' => 'renewable energy', 'right' => 'power from natural, replenishable sources'],
+                    ['left' => 'biodiversity', 'right' => 'variety of life in an ecosystem'],
+                    ['left' => 'greenhouse effect', 'right' => 'warming caused by trapped gases'],
+                    ['left' => 'fossil fuels', 'right' => 'coal, oil, gas formed from ancient organisms'],
+                ],
+            ],
+            [
+                'lesson_index' => 19,
+                'title' => 'Climate Change: Fill in the Blanks',
+                'type' => 'fill_blank',
+                'difficulty' => 'hard',
+                'description' => 'Complete each sentence with the correct term.',
+                'questions' => [
+                    ['question' => 'We need to reduce our carbon ___ to fight climate change.', 'correct_answer' => 'footprint'],
+                    ['question' => 'Solar and wind power are examples of ___ energy.', 'correct_answer' => 'renewable'],
+                    ['question' => 'The melting of ice caps causes ___ sea levels.', 'correct_answer' => 'rising'],
+                    ['question' => 'Cutting down forests is called ___.', 'correct_answer' => 'deforestation'],
+                    ['question' => 'Burning ___ fuels like oil and coal releases CO2.', 'correct_answer' => 'fossil'],
+                ],
+            ],
+
+            // Emotions ────────────────────────────────────────────────
+            [
+                'lesson_index' => 20,
+                'title' => 'Emotions: Precise Vocabulary',
+                'type' => 'multiple_choice',
+                'difficulty' => 'medium',
+                'description' => 'Choose the most precise word to describe each emotion.',
+                'questions' => [
+                    ['question' => 'She was so happy she cried — she was ___.', 'options' => ['content', 'ecstatic', 'cheerful', 'pleased'], 'correct_answer' => 'ecstatic'],
+                    ['question' => 'He was shaking with fear — he was ___.', 'options' => ['nervous', 'uneasy', 'terrified', 'apprehensive'], 'correct_answer' => 'terrified'],
+                    ['question' => 'She was so angry she couldn\'t speak — she was ___.', 'options' => ['annoyed', 'irritated', 'furious', 'frustrated'], 'correct_answer' => 'furious'],
+                    ['question' => '"Feeling blue" means:', 'options' => ['feeling cold', 'feeling sad', 'feeling confused', 'feeling jealous'], 'correct_answer' => 'feeling sad'],
+                    ['question' => '"On cloud nine" means:', 'options' => ['very high up', 'extremely happy', 'lost and confused', 'in danger'], 'correct_answer' => 'extremely happy'],
+                ],
+            ],
+            [
+                'lesson_index' => 20,
+                'title' => 'Emotions: Match the Expression',
+                'type' => 'matching',
+                'difficulty' => 'medium',
+                'description' => 'Match the emotional expression to its meaning.',
+                'questions' => [
+                    ['left' => 'at my wit\'s end', 'right' => 'completely frustrated, don\'t know what to do'],
+                    ['left' => 'a bundle of nerves', 'right' => 'extremely anxious'],
+                    ['left' => 'over the moon', 'right' => 'delighted, very happy'],
+                    ['left' => 'feeling blue', 'right' => 'feeling sad'],
+                    ['left' => 'under the weather', 'right' => 'not feeling well'],
+                ],
+            ],
+
+            // Phrasal Verbs ───────────────────────────────────────────
+            [
+                'lesson_index' => 22,
                 'title' => 'Phrasal Verbs: What Does It Mean?',
                 'type' => 'multiple_choice',
                 'difficulty' => 'hard',
@@ -432,7 +759,7 @@ class ContentSeeder extends Seeder
                 ],
             ],
             [
-                'lesson_index' => 14,
+                'lesson_index' => 22,
                 'title' => 'Phrasal Verbs: Fill the Gap',
                 'type' => 'fill_blank',
                 'difficulty' => 'hard',
@@ -446,7 +773,7 @@ class ContentSeeder extends Seeder
                 ],
             ],
 
-            // Idioms ──────────────────────────────────────────────────
+            // Idioms (Body Parts) — index stays 12 ────────────────────
             [
                 'lesson_index' => 12,
                 'title' => 'Body Idioms: Match the Meaning',
@@ -465,7 +792,7 @@ class ContentSeeder extends Seeder
 
             // IELTS ───────────────────────────────────────────────────
             [
-                'lesson_index' => 13,
+                'lesson_index' => 21,
                 'title' => 'IELTS Vocabulary: Advanced Words',
                 'type' => 'matching',
                 'difficulty' => 'hard',
