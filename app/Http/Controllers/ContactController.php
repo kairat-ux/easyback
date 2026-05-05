@@ -20,7 +20,11 @@ class ContactController extends Controller
 
         ContactMessage::create($request->only('name', 'email', 'message'));
 
-        Mail::to($request->email)->send(new ContactReplyMail($request->name));
+        try {
+            Mail::to($request->email)->send(new ContactReplyMail($request->name));
+        } catch (\Throwable) {
+            // mail failure must never block the contact form
+        }
 
         return response()->json(['message' => 'Message sent successfully'], 201);
     }
