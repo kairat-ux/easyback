@@ -227,7 +227,7 @@ export default function LessonDetail() {
             category="lesson_material"
             fileableType="lesson"
             fileableId={lesson.id}
-            readOnly={user.role === 'student'}
+            readOnly={false}
           />
         )}
 
