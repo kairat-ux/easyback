@@ -1,11 +1,13 @@
 import { useState } from 'react'
 import client from '../api/client'
+import { useAuth } from '../context/AuthContext'
 import { useLang } from '../context/LanguageContext'
 
 export default function Contact() {
   const { t } = useLang()
-  const [name, setName] = useState('')
-  const [email, setEmail] = useState('')
+  const { user } = useAuth()
+  const [name, setName] = useState(user?.name || '')
+  const [email, setEmail] = useState(user?.email || '')
   const [message, setMessage] = useState('')
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
