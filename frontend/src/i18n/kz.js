@@ -152,6 +152,41 @@ export default {
   writeComment: 'Пікір жазыңыз...',
   noComments: 'Пікірлер жоқ. Бірінші болыңыз!',
 
+  // About
+  about: 'Біз туралы',
+  aboutTitle: 'EnglishEasy туралы',
+  aboutSub: 'Біз кімбіз, не істейміз және неге бұл платформаны жасадық.',
+  aboutMissionLabel: 'Біздің миссия',
+  aboutMissionTitle: 'Ағылшын тілін барлығына қолжетімді ету',
+  aboutMissionDesc: 'EnglishEasy — құрылымдық сабақтар, интерактивті жаттығулар және прогресті бақылау арқылы ағылшын тілін үйренуге арналған онлайн платформа. Сапалы тілді оқыту барлығына қолжетімді болуы керек деп сенеміз.',
+  aboutGoalsLabel: 'Не ұсынамыз',
+  aboutGoalsTitle: 'Платформа мақсаттары',
+  aboutGoal1Title: 'Құрылымдық оқыту',
+  aboutGoal1Desc: 'Бастаушыдан озатқа дейін деңгей бойынша сабақтар.',
+  aboutGoal2Title: 'Интерактивті жаттығу',
+  aboutGoal2Desc: 'Тест, бос орынды толтыру, сәйкестендіру тапсырмалары.',
+  aboutGoal3Title: 'Прогресті бақылау',
+  aboutGoal3Desc: 'Студент өз деңгейін әрдайым білетіндей графиктер мен статистика.',
+  aboutGoal4Title: 'Қоғамдастық',
+  aboutGoal4Desc: 'Мұғалімдер контент жасайды, студенттер үйренеді, бәрі бірге өседі.',
+  aboutProjectLabel: 'Техникалық мәліметтер',
+  aboutProjectTitle: 'Қалай жасалған',
+  aboutProjectDesc: 'Заманауи технологиялардағы толық стек веб-қосымша:',
+  aboutTech1: 'Backend: Laravel 13 (PHP) REST API, Sanctum аутентификациясымен',
+  aboutTech2: 'Frontend: React 18 + Vite, 3 тіл қолдауымен (EN / RU / KZ)',
+  aboutTech3: 'Дерекқор: Render-дегі PostgreSQL',
+  aboutTech4: 'Deploy: Frontend Vercel-де, Backend Render-де',
+  aboutCta: 'Оқуды бастауға дайынсыз ба?',
+
+  // Lesson navigation
+  prevLesson: '← Алдыңғы сабақ',
+  nextLesson: 'Келесі сабақ →',
+  lessonMaterials: 'Сабақ материалдары',
+
+  // Contact extras
+  contactEmail: 'Бізге жазыңыз',
+  contactFollow: 'Біз әлеуметтік желілерде',
+
   // Teacher Dashboard
   createLesson: 'Сабақ жасау',
   createExercise: 'Жаттығу жасау',

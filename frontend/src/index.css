@@ -418,6 +418,10 @@ footer { background: var(--ink); color: rgba(255,255,255,.5); padding: 48px 40px
 .footer-inner { max-width: 1140px; margin: 0 auto; display: flex; flex-wrap: wrap; gap: 40px; justify-content: space-between; }
 .footer-brand { font-family: 'Syne', sans-serif; font-weight: 800; font-size: 1.3rem; color: var(--blue); }
 .footer-bottom { max-width: 1140px; margin: 24px auto 0; padding-top: 20px; border-top: 1px solid rgba(255,255,255,.08); font-size: .82rem; color: rgba(255,255,255,.3); text-align: center; }
+.footer-col { display: flex; flex-direction: column; gap: .5rem; min-width: 140px; }
+.footer-col-title { font-family: 'Syne', sans-serif; font-weight: 700; font-size: .85rem; color: rgba(255,255,255,.8); text-transform: uppercase; letter-spacing: .06em; margin-bottom: .25rem; }
+.footer-col a { font-size: .88rem; color: rgba(255,255,255,.45); transition: color var(--transition); }
+.footer-col a:hover { color: var(--blue); }
 
 /* Animations */
 @keyframes fadeUp { from { opacity:0; transform:translateY(20px) } to { opacity:1; transform:none } }

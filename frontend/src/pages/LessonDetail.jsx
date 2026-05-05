@@ -135,14 +135,18 @@ export default function LessonDetail() {
   const { user } = useAuth()
   const { t } = useLang()
   const [lesson, setLesson] = useState(null)
+  const [allLessons, setAllLessons] = useState([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState('')
 
   useEffect(() => {
-    client
-      .get(`/lessons/${id}`)
-      .then(res => {
-        setLesson(res.data.data ?? res.data)
+    Promise.all([
+      client.get(`/lessons/${id}`),
+      client.get('/lessons'),
+    ])
+      .then(([lessonRes, listRes]) => {
+        setLesson(lessonRes.data.data ?? lessonRes.data)
+        setAllLessons(listRes.data.data ?? listRes.data)
       })
       .catch(() => {
         setError('Failed to load lesson. It may not exist.')
@@ -169,6 +173,11 @@ export default function LessonDetail() {
       </div>
     )
   }
+
+  const sortedLessons = [...allLessons].sort((a, b) => a.id - b.id)
+  const currentIndex = sortedLessons.findIndex(l => l.id === lesson.id)
+  const prevLesson = currentIndex > 0 ? sortedLessons[currentIndex - 1] : null
+  const nextLesson = currentIndex < sortedLessons.length - 1 ? sortedLessons[currentIndex + 1] : null
 
   return (
     <div>
@@ -227,11 +236,48 @@ export default function LessonDetail() {
             category="lesson_material"
             fileableType="lesson"
             fileableId={lesson.id}
-            readOnly={false}
+            readOnly={user.role === 'student'}
           />
         )}
 
         <CommentsSection lessonId={id} />
+
+        {/* Prev / Next navigation */}
+        <div style={{
+          display: 'flex',
+          justifyContent: 'space-between',
+          gap: '1rem',
+          marginTop: '2.5rem',
+          paddingTop: '1.5rem',
+          borderTop: '1px solid rgba(44,188,253,.1)',
+          flexWrap: 'wrap',
+        }}>
+          {prevLesson ? (
+            <Link
+              to={`/lessons/${prevLesson.id}`}
+              className="btn btn-ghost"
+              style={{ fontSize: '.9rem' }}
+            >
+              {t('prevLesson')}
+              <span style={{ display: 'block', fontSize: '.8rem', color: 'var(--ink-soft)', marginTop: '.1rem' }}>
+                {prevLesson.title}
+              </span>
+            </Link>
+          ) : <div />}
+
+          {nextLesson ? (
+            <Link
+              to={`/lessons/${nextLesson.id}`}
+              className="btn btn-primary"
+              style={{ fontSize: '.9rem', textAlign: 'right' }}
+            >
+              {t('nextLesson')}
+              <span style={{ display: 'block', fontSize: '.8rem', opacity: .8, marginTop: '.1rem' }}>
+                {nextLesson.title}
+              </span>
+            </Link>
+          ) : <div />}
+        </div>
       </div>
     </div>
   )

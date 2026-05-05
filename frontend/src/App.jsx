@@ -13,6 +13,7 @@ import Progress from './pages/Progress'
 import TeacherDashboard from './pages/TeacherDashboard'
 import AdminPanel from './pages/AdminPanel'
 import Contact from './pages/Contact'
+import About from './pages/About'
 import Leaderboard from './pages/Leaderboard'
 
 function PrivateRoute({ roles }) {
@@ -34,6 +35,22 @@ function Footer() {
       <div className="footer-inner">
         <div>
           <div className="footer-brand">EnglishEasy</div>
+          <p style={{ color: 'rgba(255,255,255,.55)', fontSize: '.85rem', marginTop: '.4rem', maxWidth: '260px', lineHeight: 1.6 }}>
+            An online platform for learning English through lessons, exercises, and progress tracking.
+          </p>
+        </div>
+        <div className="footer-col">
+          <div className="footer-col-title">Pages</div>
+          <a href="/about">About Us</a>
+          <a href="/contact">Contact</a>
+          <a href="/lessons">Lessons</a>
+          <a href="/exercises">Exercises</a>
+        </div>
+        <div className="footer-col">
+          <div className="footer-col-title">Contact</div>
+          <a href="mailto:support@englisheasy.com">support@englisheasy.com</a>
+          <a href="https://t.me" target="_blank" rel="noreferrer">Telegram</a>
+          <a href="https://github.com" target="_blank" rel="noreferrer">GitHub</a>
         </div>
       </div>
       <div className="footer-bottom">&copy; 2025 EnglishEasy. All rights reserved.</div>
@@ -53,6 +70,7 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/about" element={<About />} />
 
           {/* Auth required — any role */}
           <Route element={<PrivateRoute />}>

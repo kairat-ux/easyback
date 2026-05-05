@@ -152,6 +152,41 @@ export default {
   writeComment: 'Написать комментарий...',
   noComments: 'Комментариев пока нет. Будьте первым!',
 
+  // About
+  about: 'О нас',
+  aboutTitle: 'О EnglishEasy',
+  aboutSub: 'Узнайте кто мы, что делаем и зачем создали эту платформу.',
+  aboutMissionLabel: 'Наша миссия',
+  aboutMissionTitle: 'Делаем английский доступным для всех',
+  aboutMissionDesc: 'EnglishEasy — онлайн-платформа для изучения английского языка через структурированные уроки, интерактивные упражнения и отслеживание прогресса в реальном времени. Мы верим, что качественное языковое образование должно быть доступно каждому.',
+  aboutGoalsLabel: 'Что мы предлагаем',
+  aboutGoalsTitle: 'Цели платформы',
+  aboutGoal1Title: 'Структурированное обучение',
+  aboutGoal1Desc: 'Уроки организованы по уровням — от начинающего до продвинутого.',
+  aboutGoal2Title: 'Интерактивная практика',
+  aboutGoal2Desc: 'Несколько типов упражнений: тесты, заполнение пропусков, сопоставление.',
+  aboutGoal3Title: 'Отслеживание прогресса',
+  aboutGoal3Desc: 'Графики и статистика, чтобы студент всегда знал свой уровень.',
+  aboutGoal4Title: 'Сообщество',
+  aboutGoal4Desc: 'Учителя создают контент, студенты учатся, все растут вместе.',
+  aboutProjectLabel: 'Технические детали',
+  aboutProjectTitle: 'Как это построено',
+  aboutProjectDesc: 'Полнофункциональное веб-приложение на современных технологиях:',
+  aboutTech1: 'Backend: Laravel 13 (PHP) REST API с аутентификацией Sanctum',
+  aboutTech2: 'Frontend: React 18 + Vite с поддержкой 3 языков (EN / RU / KZ)',
+  aboutTech3: 'База данных: PostgreSQL на Render',
+  aboutTech4: 'Деплой: Frontend на Vercel, Backend на Render',
+  aboutCta: 'Готов начать учиться?',
+
+  // Lesson navigation
+  prevLesson: '← Предыдущий урок',
+  nextLesson: 'Следующий урок →',
+  lessonMaterials: 'Материалы к уроку',
+
+  // Contact extras
+  contactEmail: 'Написать нам',
+  contactFollow: 'Мы в соцсетях',
+
   // Teacher Dashboard
   createLesson: 'Создать урок',
   createExercise: 'Создать упражнение',

@@ -82,6 +82,7 @@ export default function Navbar() {
     if (!user) return (
       <>
         <Link to="/" onClick={close}>{t('home')}</Link>
+        <Link to="/about" onClick={close}>{t('about')}</Link>
         <Link to="/contact" onClick={close}>{t('contact')}</Link>
         <div className="mobile-drawer-divider" />
         <Link to="/login" className="mobile-auth-link" onClick={close}>{t('logIn')}</Link>
@@ -94,6 +95,7 @@ export default function Navbar() {
         <Link to="/exercises" onClick={close}>{t('exercises')}</Link>
         <Link to="/progress" onClick={close}>{t('progress')}</Link>
         <Link to="/leaderboard" onClick={close}>{t('leaderboard')}</Link>
+        <Link to="/about" onClick={close}>{t('about')}</Link>
         <Link to="/contact" onClick={close}>{t('contact')}</Link>
         <div className="mobile-drawer-divider" />
         {logoutBtn}
@@ -105,6 +107,7 @@ export default function Navbar() {
         <Link to="/exercises" onClick={close}>{t('exercises')}</Link>
         <Link to="/teacher" onClick={close}>{t('dashboard')}</Link>
         <Link to="/leaderboard" onClick={close}>{t('leaderboard')}</Link>
+        <Link to="/about" onClick={close}>{t('about')}</Link>
         <Link to="/contact" onClick={close}>{t('contact')}</Link>
         <div className="mobile-drawer-divider" />
         {logoutBtn}
@@ -117,6 +120,7 @@ export default function Navbar() {
         <Link to="/teacher" onClick={close}>{t('dashboard')}</Link>
         <AdminBadgeLink to="/admin">{t('adminPanel')}</AdminBadgeLink>
         <Link to="/leaderboard" onClick={close}>{t('leaderboard')}</Link>
+        <Link to="/about" onClick={close}>{t('about')}</Link>
         <div className="mobile-drawer-divider" />
         {logoutBtn}
       </>
@@ -131,16 +135,16 @@ export default function Navbar() {
         {/* Desktop links */}
         <ul className="navbar-links">
           {!user && (
-            <><li><Link to="/">{t('home')}</Link></li><li><Link to="/contact">{t('contact')}</Link></li></>
+            <><li><Link to="/">{t('home')}</Link></li><li><Link to="/about">{t('about')}</Link></li><li><Link to="/contact">{t('contact')}</Link></li></>
           )}
           {user?.role === 'student' && (
-            <><li><Link to="/lessons">{t('lessons')}</Link></li><li><Link to="/exercises">{t('exercises')}</Link></li><li><Link to="/progress">{t('progress')}</Link></li><li><Link to="/leaderboard">{t('leaderboard')}</Link></li><li><Link to="/contact">{t('contact')}</Link></li></>
+            <><li><Link to="/lessons">{t('lessons')}</Link></li><li><Link to="/exercises">{t('exercises')}</Link></li><li><Link to="/progress">{t('progress')}</Link></li><li><Link to="/leaderboard">{t('leaderboard')}</Link></li><li><Link to="/about">{t('about')}</Link></li><li><Link to="/contact">{t('contact')}</Link></li></>
           )}
           {user?.role === 'teacher' && (
-            <><li><Link to="/lessons">{t('lessons')}</Link></li><li><Link to="/exercises">{t('exercises')}</Link></li><li><Link to="/teacher">{t('dashboard')}</Link></li><li><Link to="/leaderboard">{t('leaderboard')}</Link></li><li><Link to="/contact">{t('contact')}</Link></li></>
+            <><li><Link to="/lessons">{t('lessons')}</Link></li><li><Link to="/exercises">{t('exercises')}</Link></li><li><Link to="/teacher">{t('dashboard')}</Link></li><li><Link to="/leaderboard">{t('leaderboard')}</Link></li><li><Link to="/about">{t('about')}</Link></li><li><Link to="/contact">{t('contact')}</Link></li></>
           )}
           {user?.role === 'admin' && (
-            <><li><Link to="/lessons">{t('lessons')}</Link></li><li><Link to="/exercises">{t('exercises')}</Link></li><li><Link to="/teacher">{t('dashboard')}</Link></li><li><AdminBadgeLink to="/admin">{t('adminPanel')}</AdminBadgeLink></li><li><Link to="/leaderboard">{t('leaderboard')}</Link></li></>
+            <><li><Link to="/lessons">{t('lessons')}</Link></li><li><Link to="/exercises">{t('exercises')}</Link></li><li><Link to="/teacher">{t('dashboard')}</Link></li><li><AdminBadgeLink to="/admin">{t('adminPanel')}</AdminBadgeLink></li><li><Link to="/leaderboard">{t('leaderboard')}</Link></li><li><Link to="/about">{t('about')}</Link></li></>
           )}
         </ul>
 

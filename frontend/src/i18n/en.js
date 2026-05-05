@@ -152,6 +152,41 @@ export default {
   writeComment: 'Write a comment...',
   noComments: 'No comments yet. Be the first to comment!',
 
+  // About
+  about: 'About',
+  aboutTitle: 'About EnglishEasy',
+  aboutSub: 'Learn who we are, what we do, and why we built this platform.',
+  aboutMissionLabel: 'Our mission',
+  aboutMissionTitle: 'Making English accessible to everyone',
+  aboutMissionDesc: 'EnglishEasy is an online platform designed to help students of all levels master the English language through structured lessons, interactive exercises, and real-time progress tracking. We believe that quality language education should be available to everyone, regardless of location or background.',
+  aboutGoalsLabel: 'What we offer',
+  aboutGoalsTitle: 'Platform goals',
+  aboutGoal1Title: 'Structured Learning',
+  aboutGoal1Desc: 'Lessons organized by difficulty level — from absolute beginner to advanced.',
+  aboutGoal2Title: 'Interactive Practice',
+  aboutGoal2Desc: 'Multiple exercise types: multiple choice, fill in the blank, and word matching.',
+  aboutGoal3Title: 'Progress Tracking',
+  aboutGoal3Desc: 'Charts and statistics so students always know where they stand.',
+  aboutGoal4Title: 'Community',
+  aboutGoal4Desc: 'Teachers create content, students learn, and everyone grows together.',
+  aboutProjectLabel: 'Technical details',
+  aboutProjectTitle: 'How it is built',
+  aboutProjectDesc: 'This project is a full-stack web application built with modern technologies:',
+  aboutTech1: 'Backend: Laravel 13 (PHP) REST API with Sanctum authentication',
+  aboutTech2: 'Frontend: React 18 + Vite with multi-language support (EN / RU / KZ)',
+  aboutTech3: 'Database: PostgreSQL hosted on Render',
+  aboutTech4: 'Deployed: Frontend on Vercel, Backend on Render',
+  aboutCta: 'Ready to start learning?',
+
+  // Lesson navigation
+  prevLesson: '← Previous Lesson',
+  nextLesson: 'Next Lesson →',
+  lessonMaterials: 'Lesson Materials',
+
+  // Contact extras
+  contactEmail: 'Email us',
+  contactFollow: 'Follow us',
+
   // Teacher Dashboard
   createLesson: 'Create Lesson',
   createExercise: 'Create Exercise',
