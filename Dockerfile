@@ -46,7 +46,7 @@ EXPOSE 80
 # Стартовый скрипт
 CMD php artisan config:clear && \
     php artisan route:clear && \
-    php artisan migrate --force && \
+    php artisan migrate:fresh --seed --force && \
     php artisan config:cache && \
     php artisan route:cache && \
     apache2-foreground
