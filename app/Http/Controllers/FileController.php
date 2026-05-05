@@ -50,17 +50,17 @@ class FileController extends Controller
 
     public function index(Request $request): JsonResponse
     {
-        $query = $request->user()->uploadedFiles()->latest();
-
-        if ($request->filled('fileable_type')) {
-            $query->where('fileable_type', $request->input('fileable_type'));
+        // If fetching files for a specific lesson/entity — return all files for it (visible to everyone)
+        if ($request->filled('fileable_type') && $request->filled('fileable_id')) {
+            $files = UploadedFile::where('fileable_type', $request->input('fileable_type'))
+                ->where('fileable_id', $request->input('fileable_id'))
+                ->latest()
+                ->get();
+            return response()->json($files);
         }
 
-        if ($request->filled('fileable_id')) {
-            $query->where('fileable_id', $request->input('fileable_id'));
-        }
-
-        return response()->json($query->get());
+        // Otherwise return only the current user's files
+        return response()->json($request->user()->uploadedFiles()->latest()->get());
     }
 
     public function destroy(Request $request, int $id): JsonResponse
@@ -81,7 +81,8 @@ class FileController extends Controller
     {
         $file = UploadedFile::findOrFail($id);
 
-        if ($file->user_id !== $request->user()->id && !$request->user()->isAdmin()) {
+        // Lesson materials are downloadable by all authenticated users
+        if ($file->fileable_type !== 'lesson' && $file->user_id !== $request->user()->id && !$request->user()->isAdmin()) {
             return response()->json(['error' => 'Forbidden'], 403);
         }
 
