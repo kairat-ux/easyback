@@ -6,6 +6,7 @@ use App\Mail\ContactReplyMail;
 use App\Models\ContactMessage;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
@@ -22,8 +23,9 @@ class ContactController extends Controller
 
         try {
             Mail::to($request->email)->send(new ContactReplyMail($request->name));
-        } catch (\Throwable) {
-            // mail failure must never block the contact form
+        } catch (\Throwable $e) {
+            Log::error('Contact mail failed: ' . $e->getMessage());
+            return response()->json(['message' => 'Message saved. Mail error: ' . $e->getMessage()], 201);
         }
 
         return response()->json(['message' => 'Message sent successfully'], 201);
