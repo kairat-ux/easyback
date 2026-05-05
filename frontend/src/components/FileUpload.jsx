@@ -104,7 +104,7 @@ export default function FileUpload({ category, fileableType, fileableId, readOnl
               <span style={{ wordBreak: 'break-word', marginRight: '.5rem' }}>{f.original_name || f.filename || f.name}</span>
               <div style={{ display: 'flex', gap: '.5rem', alignItems: 'center', flexShrink: 0 }}>
                 <a
-                  href={`/api/files/${f.id}/download`}
+                  href={`${import.meta.env.VITE_API_URL || '/api'}/files/${f.id}/download`}
                   target="_blank"
                   rel="noreferrer"
                   className="btn btn-ghost btn-sm"
