@@ -99,31 +99,50 @@ export default function FileUpload({ category, fileableType, fileableId, readOnl
 
       {files.length > 0 ? (
         <div className="file-list">
-          {files.map(f => (
-            <div className="file-item" key={f.id}>
-              <span style={{ wordBreak: 'break-word', marginRight: '.5rem' }}>{f.original_name || f.filename || f.name}</span>
-              <div style={{ display: 'flex', gap: '.5rem', alignItems: 'center', flexShrink: 0 }}>
-                <a
-                  href={`${import.meta.env.VITE_API_URL || '/api'}/files/${f.id}/download`}
-                  target="_blank"
-                  rel="noreferrer"
-                  className="btn btn-ghost btn-sm"
-                  style={{ padding: '.3rem .75rem', fontSize: '.82rem' }}
-                >
-                  {t('download')}
-                </a>
-                {!readOnly && (f.user_id === user?.id || user?.role === 'admin') && (
-                  <button
-                    className="btn btn-danger btn-sm"
-                    style={{ padding: '.3rem .75rem', fontSize: '.82rem' }}
-                    onClick={() => handleDelete(f.id)}
-                  >
-                    {t('delete')}
-                  </button>
+          {files.map(f => {
+            const name = f.original_name || f.filename || f.name || ''
+            const isImage = /\.(jpg|jpeg|png|gif|webp|svg)$/i.test(name)
+            const downloadUrl = `${import.meta.env.VITE_API_URL || '/api'}/files/${f.id}/download`
+            return (
+              <div key={f.id} style={{ display: 'flex', flexDirection: 'column', gap: '.5rem', padding: '.75rem', background: 'var(--surface)', borderRadius: 'var(--radius-sm)', border: '1px solid rgba(44,188,253,.1)' }}>
+                {isImage && (
+                  <a href={downloadUrl} target="_blank" rel="noreferrer">
+                    <img
+                      src={downloadUrl}
+                      alt={name}
+                      style={{ maxWidth: '100%', maxHeight: '200px', objectFit: 'contain', borderRadius: '8px', display: 'block' }}
+                      onError={e => { e.target.style.display = 'none' }}
+                    />
+                  </a>
                 )}
+                <div className="file-item" style={{ border: 'none', padding: 0, background: 'none' }}>
+                  <span style={{ wordBreak: 'break-word', marginRight: '.5rem', fontSize: '.88rem' }}>
+                    {isImage ? '🖼 ' : '📄 '}{name}
+                  </span>
+                  <div style={{ display: 'flex', gap: '.5rem', alignItems: 'center', flexShrink: 0 }}>
+                    <a
+                      href={downloadUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="btn btn-ghost btn-sm"
+                      style={{ padding: '.3rem .75rem', fontSize: '.82rem' }}
+                    >
+                      {t('download')}
+                    </a>
+                    {!readOnly && (f.user_id === user?.id || user?.role === 'admin') && (
+                      <button
+                        className="btn btn-danger btn-sm"
+                        style={{ padding: '.3rem .75rem', fontSize: '.82rem' }}
+                        onClick={() => handleDelete(f.id)}
+                      >
+                        {t('delete')}
+                      </button>
+                    )}
+                  </div>
+                </div>
               </div>
-            </div>
-          ))}
+            )
+          })}
         </div>
       ) : (
         !readOnly && (

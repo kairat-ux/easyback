@@ -10,6 +10,7 @@ use App\Http\Controllers\ExerciseController;
 use App\Http\Controllers\FileController;
 use App\Http\Controllers\LeaderboardController;
 use App\Http\Controllers\LessonController;
+use App\Http\Controllers\LessonLinkController;
 use App\Http\Controllers\ProgressController;
 use App\Http\Controllers\UserController;
 
@@ -41,6 +42,15 @@ Route::middleware('auth:sanctum')->group(function () {
     Route::get('/lessons/{lessonId}/comments',        [CommentController::class, 'index']);
     Route::post('/lessons/{lessonId}/comments',       [CommentController::class, 'store']);
     Route::delete('/lessons/{lessonId}/comments/{id}', [CommentController::class, 'destroy']);
+
+    // Lesson links — view (all auth users)
+    Route::get('/lessons/{lessonId}/links', [LessonLinkController::class, 'index']);
+
+    // Lesson links — mutate (teacher + admin only)
+    Route::middleware('role:teacher,admin')->group(function () {
+        Route::post('/lessons/{lessonId}/links',          [LessonLinkController::class, 'store']);
+        Route::delete('/lessons/{lessonId}/links/{id}',   [LessonLinkController::class, 'destroy']);
+    });
 
     // Exercises — view accessible by all authenticated users
     Route::get('/exercises',      [ExerciseController::class, 'index']);

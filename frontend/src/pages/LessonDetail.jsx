@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useParams, Link } from 'react-router-dom'
 import client from '../api/client'
 import FileUpload from '../components/FileUpload'
+import LessonLinks from '../components/LessonLinks'
 import { useAuth } from '../context/AuthContext'
 import { useLang } from '../context/LanguageContext'
 
@@ -239,6 +240,8 @@ export default function LessonDetail() {
             readOnly={user.role === 'student'}
           />
         )}
+
+        {user && <LessonLinks lessonId={lesson.id} />}
 
         <CommentsSection lessonId={id} />
 
