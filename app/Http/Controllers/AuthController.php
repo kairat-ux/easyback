@@ -26,13 +26,14 @@ class AuthController extends Controller
             'status'   => $status,
         ]);
 
-        try {
-            Mail::to($user->email)->send(new WelcomeMail($user));
-        } catch (\Throwable) {
-            // mail failure must never block registration
-        }
-
         $token = $user->createToken('auth_token')->plainTextToken;
+
+        // Send welcome mail after the response is returned — never blocks registration
+        app()->terminating(function () use ($user) {
+            try {
+                Mail::to($user->email)->send(new WelcomeMail($user));
+            } catch (\Throwable) {}
+        });
 
         $message = $user->role === 'teacher'
             ? 'Registration successful. Wait for admin approval.'
